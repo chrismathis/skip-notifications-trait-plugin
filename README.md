@@ -43,6 +43,20 @@ Similar to the [Disable GitHub Multibranch Status plugin](https://plugins.jenkin
     )
   )
 ```
+### Gitea
+
+```Groovy
+  checkout resolveScm(
+    source: gitea(
+      repoOwner: 'example-owner',
+      repository: 'example-repository',
+      traits: [
+        giteaSkipNotifications(),
+        ...,
+      ]
+    )
+  )
+```
 
 ### Via Jenkins UI
 
